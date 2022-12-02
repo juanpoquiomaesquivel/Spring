@@ -9,6 +9,32 @@
     http://www.springframework.org/schema/context/spring-context-3.1.xsd
 ">
 
-<bean id="miEmpleado" class="es.pildoras.IoC.JefeEmpleado"></bean>
+<!-- Cargar el archivo de propiedades -->
+<context:property-placeholder location="datosEmpresa.propiedades"/>
+
+<!-- Creación de la dependencia -->
+<bean id="miInforme" class="es.pildoras.IoC.Informe"></bean>
+
+<bean id="miEmpleado" class="es.pildoras.IoC.JefeEmpleado">
+
+<!-- 3. Configuración de la dependencia (constructor) -->
+<constructor-arg ref="miInforme"></constructor-arg>
+
+<!-- Inyección de campos externos (setters) -->
+<property name="email" value="${email}"></property>
+<property name="nombreEmpresa" value="${nombreEmpresa}"></property>
+
+</bean>
+
+<bean id="miSecretarioEmpleado" class="es.pildoras.IoC.SecretarioEmpleado">
+
+<!-- 3. Configuración de la dependencia (setter) -->
+<property name="informeNuevo" ref="miInforme"></property>
+
+<!-- Inyección de campos (setters) -->
+<property name="email" value="secretaria@pildorasinformaticas.es"></property>
+<property name="nombreEmpresa" value="Pildoras Informaticas"></property>
+
+</bean>
 
 </beans>
