@@ -34,8 +34,3 @@ public class UsoEmpleados {
 		contexto.close();
 	}
 }
-
-// https://www.youtube.com/watch?v=BghyeYN34a4&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=9
-// https://www.youtube.com/watch?v=qIwFo_-mqVg&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=10
-// https://www.youtube.com/watch?v=p1zVlZ56ym8&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=11
-// https://www.youtube.com/watch?v=rqqX8qo4d4U&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=12
