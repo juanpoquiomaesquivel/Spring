@@ -25,5 +25,3 @@ public class UsoDemoSingletonPrototype {
 		contexto.close();
 	}
 }
-
-//https://www.youtube.com/watch?v=ZMmw_aZT76c&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=13
