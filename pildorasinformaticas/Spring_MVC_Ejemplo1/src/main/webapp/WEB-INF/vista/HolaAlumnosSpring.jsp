@@ -5,6 +5,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Formulario procesado</title>
+
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath }/assets/estilos/miestilo.css">
 </head>
 <body>
 
@@ -17,6 +19,9 @@ Hola ${param.nombreAlumno }, bienvenido al curso de Spring.
 ${mensajeClaro }
 
 </p>
+
+<!-- Situarnos en la carpeta webapp y obtener el recurso -->
+<img alt="peru del 2018" src="${pageContext.request.contextPath }/assets/imgs/peru2018.jpg">
 
 </body>
 </html>
