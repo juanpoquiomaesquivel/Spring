@@ -10,5 +10,13 @@
 
 Hola ${param.nombreAlumno }, bienvenido al curso de Spring.
 
+<p><br/>
+
+<h2>Atencion a todos</h2>
+
+${mensajeClaro }
+
+</p>
+
 </body>
 </html>

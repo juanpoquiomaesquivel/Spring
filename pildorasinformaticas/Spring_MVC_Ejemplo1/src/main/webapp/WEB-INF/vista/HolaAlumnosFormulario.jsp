@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Formulario</title>
+<title>Formulario 2</title>
 </head>
 <body>
 
-<form action="procesarFormulario" method="get">
+<form action="procesarFormulario2" method="get">
 
 <input type="text" name="nombreAlumno">
 <input type="submit">
