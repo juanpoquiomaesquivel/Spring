@@ -20,7 +20,6 @@ ${mensajeClaro }
 
 </p>
 
-<!-- Situarnos en la carpeta webapp y obtener el recurso -->
 <img alt="peru del 2018" src="${pageContext.request.contextPath }/assets/imgs/peru2018.jpg">
 
 </body>
