@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping("/principal") // lo usamos para evitar el conflicto de rutas #1
+@RequestMapping("/principal")
 public class HolaAlumnosControlador {
 
 	@RequestMapping("/muestraFormulario")
