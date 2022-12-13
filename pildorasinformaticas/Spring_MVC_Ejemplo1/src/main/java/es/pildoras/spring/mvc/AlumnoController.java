@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/alumno")
 public class AlumnoController {
 	
-	@InitBinder // notación para procesar previamente la petición
+	@InitBinder
 	public void miBinder(WebDataBinder binder) {
 		StringTrimmerEditor recortaEspaciosBlanco = new StringTrimmerEditor(true);
 		

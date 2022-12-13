@@ -8,7 +8,7 @@
 </head>
 <body>
 
-El alumno <strong>${elAlumno.nombre } ${elAlumno.apellido }, edad=${elAlumno.edad } e e-mail=${elAlumno.email }</strong> se ha registrado con exito.
+El alumno <strong>${elAlumno.nombre } ${elAlumno.apellido }, edad=${elAlumno.edad }, e-mail=${elAlumno.email } y codigo postal: ${elAlumno.codigoPostal }</strong> se ha registrado con exito.
 La asignatura escogida es: <strong>${elAlumno.optativa }</strong>
 La ciudad donde iniciara los estudios el alumno: <strong>${elAlumno.ciudadEstudios }</strong>
 Los idiomas que escogio el alumno son: <strong>${elAlumno.idiomasAlumno }</strong>
