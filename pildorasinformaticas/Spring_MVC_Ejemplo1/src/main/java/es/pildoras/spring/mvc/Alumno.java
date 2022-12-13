@@ -8,8 +8,6 @@ import javax.validation.constraints.Size;
 
 public class Alumno {
 	
-	// Especificar propiedades a validar en la clase Alumno correspondiente
-
 	@NotNull
 	@Size(min=2, message="Campo requerido")
 	private String nombre;

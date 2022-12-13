@@ -2,9 +2,12 @@ package es.pildoras.spring.mvc;
 
 import javax.validation.Valid;
 
+import org.springframework.beans.propertyeditors.StringTrimmerEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -12,6 +15,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/alumno")
 public class AlumnoController {
+	
+	@InitBinder // notación para procesar previamente la petición
+	public void miBinder(WebDataBinder binder) {
+		StringTrimmerEditor recortaEspaciosBlanco = new StringTrimmerEditor(true);
+		
+		binder.registerCustomEditor(String.class, recortaEspaciosBlanco);
+	}
 
 	@RequestMapping("/muestraFormulario")
 	public String muestraFormulario(Model modelo) {
@@ -22,9 +32,8 @@ public class AlumnoController {
 		return "alumnoRegistroFormulario";
 	}
 	
-	@RequestMapping("/procesarFormulario") // los resultados de la validacion se guardan en BindingResult
-	// tambien indicamos con @Valida que estamos utilizando validacion
-	public String procesarFormulario(@Valid @ModelAttribute("elAlumno") Alumno elAlumno, BindingResult resultadoValidacion) { // Especificar validacion en el controlador
+	@RequestMapping("/procesarFormulario")
+	public String procesarFormulario(@Valid @ModelAttribute("elAlumno") Alumno elAlumno, BindingResult resultadoValidacion) {
 		
 		if (resultadoValidacion.hasErrors()) {
 			return "alumnoRegistroFormulario";
@@ -33,7 +42,3 @@ public class AlumnoController {
 		return "confirmacionRegistroAlumno";
 	}
 }
-
-// https://www.youtube.com/watch?v=iUXhIsiRLuA&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=38
-// https://www.youtube.com/watch?v=1uQGwJ_-Hpw&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=39
-// https://www.youtube.com/watch?v=ur38aDTMNuc&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=40

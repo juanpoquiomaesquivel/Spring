@@ -24,13 +24,13 @@ Apellido:
 		<br />
 Edad:
 <form:input path="edad" />
-<form:errors path="edad" style="color:red;"/> <!-- especificamos el mensaje de error -->
+<form:errors path="edad" style="color:red;"/>
 		<br />
 		<br />
 		<br />
 E-mail:
 <form:input path="email" />
-<form:errors path="email" style="color:red;"/> <!-- especificamos el mensaje de error -->
+<form:errors path="email" style="color:red;"/>
 		<br />
 		<br />
 		<br />
