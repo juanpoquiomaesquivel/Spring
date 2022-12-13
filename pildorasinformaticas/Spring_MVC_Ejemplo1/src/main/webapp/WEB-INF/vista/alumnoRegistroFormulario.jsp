@@ -9,16 +9,28 @@
 </head>
 <body>
 
-	<!-- creamos el formulario, definimos donde se procesará y el modelo -->
 	<form:form action="procesarFormulario" modelAttribute="elAlumno">
 
 Nombre:
 <form:input path="nombre" />
+<form:errors path="nombre" style="color:red;"/> <!-- especificamos el mensaje de error -->
 		<br />
 		<br />
 		<br />
 Apellido:
 <form:input path="apellido" />
+		<br />
+		<br />
+		<br />
+Edad:
+<form:input path="edad" />
+<form:errors path="edad" style="color:red;"/> <!-- especificamos el mensaje de error -->
+		<br />
+		<br />
+		<br />
+E-mail:
+<form:input path="email" />
+<form:errors path="email" style="color:red;"/> <!-- especificamos el mensaje de error -->
 		<br />
 		<br />
 		<br />

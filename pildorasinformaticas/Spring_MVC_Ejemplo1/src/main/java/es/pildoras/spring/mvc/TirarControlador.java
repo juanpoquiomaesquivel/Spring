@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping("/secundario") // para evitar el conflicto de rutas, usado como ruta relativa
+@RequestMapping("/secundario")
 public class TirarControlador {
 
 	@RequestMapping("/muestraFormulario")
@@ -24,5 +24,3 @@ public class TirarControlador {
 		return "HolaAlumnosSpring";
 	}
 }
-
-// https://www.youtube.com/watch?v=8LkJV3XVbc8&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=33
