@@ -25,11 +25,9 @@ public class Alumno {
 	@Email
 	private String email;
 	
-	@Pattern(regexp="[0-9]{5}", message="solo 5 digitos, por favor") // notacion para la expresion regular
+	@Pattern(regexp="[0-9]{5}", message="solo 5 digitos, por favor")
 	private String codigoPostal;
 	
-	// https://www.youtube.com/watch?v=v05UX4Il8ps&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=42
-
 	public String getNombre() {
 		return nombre;
 	}

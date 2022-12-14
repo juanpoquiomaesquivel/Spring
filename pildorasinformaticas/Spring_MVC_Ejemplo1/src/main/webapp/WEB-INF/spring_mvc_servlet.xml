@@ -27,6 +27,12 @@
 	<!-- Especificar donde se encuentran nuestros recursos -->
 	<mvc:resources location="/assets/" mapping="/assets/**"></mvc:resources>
 
+	
+	<!-- agregando bean para los mensajes personalizados -->
+	<!-- https://www.youtube.com/watch?v=ZMFRfLaC-tA&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=43 -->
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+	<property name="basenames" value="resources/messages"></property>
+	</bean>
 </beans>
 
 
