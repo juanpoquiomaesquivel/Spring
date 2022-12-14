@@ -7,6 +7,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import es.pildoras.spring.mvc.validacionpersonalizada.CPostalMadrid;
+
 public class Alumno {
 	
 	@NotNull
@@ -25,7 +27,8 @@ public class Alumno {
 	@Email
 	private String email;
 	
-	@Pattern(regexp="[0-9]{5}", message="solo 5 digitos, por favor")
+	// @Pattern(regexp="[0-9]{5}", message="solo 5 digitos, por favor")
+	@CPostalMadrid
 	private String codigoPostal;
 	
 	public String getNombre() {
