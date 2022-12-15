@@ -22,6 +22,3 @@ public class PruebasJDBC {
 		}
 	}
 }
-
-// https://www.youtube.com/watch?v=sk0YuQPaPWA&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=46
-// https://www.youtube.com/watch?v=LugA8GPGcz0&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=47
