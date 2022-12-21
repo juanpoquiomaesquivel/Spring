@@ -2,12 +2,12 @@ package es.pildoras.conexionHibernate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity; // version 5.6.0
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-// mapeo de clase a tabla
-@Entity // transformar nuestra clase en entidad para que se corresponda con una tabla en
-		// la bbdd
+@Entity
 @Table(name = "clientes")
 public class Clientes {
 
@@ -22,6 +22,7 @@ public class Clientes {
 	}
 
 	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY) // para asignar clave principal
 	@Column(name = "Id")
 	private int id;
 	@Column(name = "Nombre")
