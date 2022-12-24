@@ -43,5 +43,3 @@ public class GuardaClientePrueba {
 	}
 
 }
-
-// https://www.youtube.com/watch?v=74_ynB007uQ&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=50
