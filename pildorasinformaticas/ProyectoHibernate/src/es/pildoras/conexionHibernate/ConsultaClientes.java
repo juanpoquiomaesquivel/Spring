@@ -55,5 +55,3 @@ public class ConsultaClientes {
 		}
 	}
 }
-
-// https://www.youtube.com/watch?v=aiJAk022uA8&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=51
