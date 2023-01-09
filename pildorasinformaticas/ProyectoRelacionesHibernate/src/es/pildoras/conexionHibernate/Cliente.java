@@ -85,9 +85,3 @@ public class Cliente {
 		this.apellido = apellido;
 	}
 }
-
-//https://www.youtube.com/watch?v=JDhbvRKXVHE&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=53
-//https://www.youtube.com/watch?v=Fbsq1poG1Z8&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=54
-//https://www.youtube.com/watch?v=OKfXRhKNLDk&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=55
-//https://www.youtube.com/watch?v=xXkxA2k10cY&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=56
-//https://www.youtube.com/watch?v=B6MCFhBekWI&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=57

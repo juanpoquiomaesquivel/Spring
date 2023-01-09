@@ -4,7 +4,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class ObtenerCliente {
+public class EliminaDetallesCliente {
 
 	public static void main(String[] args) {
 		SessionFactory miFactory = new Configuration().configure("hibernate.cfg.xml")
@@ -17,26 +17,25 @@ public class ObtenerCliente {
 		try {
 			miSession.beginTransaction();
 			
-			// obtener detalles cliente
-			DetallesCliente dcr = miSession.get(DetallesCliente.class, 1);
+			DetallesCliente dc = miSession.get(DetallesCliente.class, 4);
 			
-			System.out.println(dcr);
-			
-			System.out.println(dcr.getC());
+			if (dc != null) {
+				System.out.println("Voy a eliminar el cliente");
+				
+				miSession.delete(dc);
 
-			System.out.println("Registro obtenido correctamente de BBDD");
-			
-			System.out.println("Ahora vamos a eliminar en cascada.");
-			
-			miSession.delete(dcr);
+				miSession.getTransaction().commit();
 
-			miSession.getTransaction().commit();
+				System.out.println("Registro eliminado correctamente en BBDD");
+			} else {
+				System.out.println("Nada que eliminar");
+			}
 
-		} catch (Exception ex) {
-			System.out.println(ex.getMessage());
-		} finally {
 			miSession.close();
+		} finally {
 			miFactory.close();
 		}
 	}
 }
+
+// https://www.youtube.com/watch?v=JABaETi74yk&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=59

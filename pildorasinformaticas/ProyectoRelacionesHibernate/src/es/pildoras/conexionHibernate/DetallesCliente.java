@@ -48,7 +48,7 @@ public class DetallesCliente {
 		this.comentarios = comentarios;
 	}
 	
-	@OneToOne(mappedBy = "dc", cascade = CascadeType.ALL)
+	@OneToOne(mappedBy = "dc")
 	@JoinColumn(name = "id")
 	private Cliente c;
 
