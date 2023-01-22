@@ -10,14 +10,15 @@ public class InsertaCliente {
 		SessionFactory miFactory = new Configuration().configure("hibernate.cfg.xml")
 				.addAnnotatedClass(Cliente.class)
 				.addAnnotatedClass(DetallesCliente.class)
+				.addAnnotatedClass(Pedido.class)
 				.buildSessionFactory();
 
 		Session miSession = miFactory.openSession();
 
 		try {
-			Cliente c1 = new Cliente("Sandra", "Perez", "Moldavia");
+			Cliente c1 = new Cliente("Ana", "Marín", "Gran vía");
 			
-			DetallesCliente dc1 = new DetallesCliente("www.dos.com.pe", "1651615", "segundo cliente");
+			DetallesCliente dc1 = new DetallesCliente("www.tres.com.pe", "1451615", "tercer cliente");
 			
 			// asociar los objetos
 			c1.setDc(dc1);

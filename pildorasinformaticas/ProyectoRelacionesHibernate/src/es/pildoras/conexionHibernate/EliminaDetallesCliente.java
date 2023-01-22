@@ -37,5 +37,3 @@ public class EliminaDetallesCliente {
 		}
 	}
 }
-
-// https://www.youtube.com/watch?v=JABaETi74yk&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=59
