@@ -6,6 +6,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity; // version 5.6.0
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -43,7 +44,7 @@ public class Cliente {
 	private String apellido;
 	@Column(name = "direccion")
 	private String direccion;
-	@OneToMany(mappedBy = "cliente", cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH,
+	@OneToMany(fetch=FetchType.LAZY, mappedBy = "cliente", cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.DETACH,
 			CascadeType.REFRESH })
 	private List<Pedido> pedidos;
 
@@ -110,3 +111,6 @@ public class Cliente {
 		this.apellido = apellido;
 	}
 }
+
+// https://www.youtube.com/watch?v=Bi3uIoW2nG4&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=64
+// https://www.youtube.com/watch?v=RzA-vgHuoW0&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=65

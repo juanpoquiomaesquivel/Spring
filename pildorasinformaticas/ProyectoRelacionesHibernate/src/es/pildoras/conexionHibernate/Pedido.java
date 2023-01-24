@@ -67,8 +67,3 @@ public class Pedido {
 		return "Pedido [id=" + id + ", fecha=" + fecha + ", forma_pago=" + forma_pago + "]";
 	}
 }
-
-// https://www.youtube.com/watch?v=7UItZlS9Vkk&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=60
-// https://www.youtube.com/watch?v=XPbBIpK8a9o&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=61
-// https://www.youtube.com/watch?v=zu8cYc5mLqI&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=62
-// https://www.youtube.com/watch?v=z0OFQSzudJc&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=63
