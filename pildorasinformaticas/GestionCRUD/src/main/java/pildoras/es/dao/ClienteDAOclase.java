@@ -20,18 +20,29 @@ public class ClienteDAOclase implements ClienteDAO {
 		// TODO Auto-generated method stub
 		// Obtener la session
 		Session miSession = sessionFactory.getCurrentSession();
-		
+
 		// Crear la consulta
 		Query<Cliente> miQuery = miSession.createQuery("from Cliente", Cliente.class);
-		
+
 		// Ejecutar la query y devolver los resultados
 		List<Cliente> clientes = miQuery.getResultList();
-		
+
 		return clientes;
 	}
 
 	@Autowired
 	private SessionFactory sessionFactory;
+
+	@Override
+	@Transactional
+	public void insertarCliente(Cliente elCliente) {
+		// TODO Auto-generated method stub
+		// Obtener la session
+		Session miSession = sessionFactory.getCurrentSession();
+
+		// Insertar el cliente
+		miSession.save(elCliente);
+	}
 }
 
 // https://www.youtube.com/watch?v=pUsul0OnEYA&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=69

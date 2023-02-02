@@ -26,5 +26,8 @@ Hemos llegado a la lista de futuros cliente
 </c:forEach>
 </table>
 
+<br/>
+<input type="button" value="Agregar cliente" onclick="window.location.href='muestraFormularioAgregar'; return false;"/>
+
 </body>
 </html>
