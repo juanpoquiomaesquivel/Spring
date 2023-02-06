@@ -41,7 +41,7 @@ public class ClienteDAOclase implements ClienteDAO {
 		Session miSession = sessionFactory.getCurrentSession();
 
 		// Insertar el cliente
-		//miSession.save(elCliente);
+		// miSession.save(elCliente);
 		miSession.saveOrUpdate(elCliente);
 	}
 
@@ -51,11 +51,24 @@ public class ClienteDAOclase implements ClienteDAO {
 		// TODO Auto-generated method stub
 		// Obtener la session
 		Session miSession = sessionFactory.getCurrentSession();
-		
+
 		// Obtener la información del cliente seleccionado
 		Cliente elCliente = miSession.get(Cliente.class, id);
-		
+
 		return elCliente;
+	}
+
+	@Override
+	@Transactional
+	public void eliminarCliente(Integer id) {
+		// TODO Auto-generated method stub
+		// Obtener la session
+		Session miSession = sessionFactory.getCurrentSession();
+
+		// BOrrar el cliente de la bbdd utilizando el ID
+		Query consulta = miSession.createQuery("delete from Cliente where id=:IdDelCliente");
+		consulta.setParameter("IdDelCliente", id);
+		consulta.executeUpdate();
 	}
 }
 

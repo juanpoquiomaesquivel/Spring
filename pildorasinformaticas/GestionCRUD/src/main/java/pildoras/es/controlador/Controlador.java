@@ -62,9 +62,20 @@ public class Controlador {
 		return "formularioCliente";
 	}
 	
+	@GetMapping("/eliminar")
+	public String eliminarCliente(@RequestParam("clienteId") Integer id) {
+		// Eliminar el cliente con id = "id"
+		clienteDAO.eliminarCliente(id);
+		
+		// Reedirencionar  a la lista
+		
+		return "redirect:/cliente/lista";
+	}
+	
 	@Autowired
 	private ClienteDAO clienteDAO;
 }
 
 // https://www.youtube.com/watch?v=4o560_FOzdk&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=71
 // https://www.youtube.com/watch?v=uYzJA8LdpgQ&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=73
+// https://www.youtube.com/watch?v=gEkLJy5HLqs&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=75
