@@ -8,7 +8,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class LoginConAspecto {
 
-	@Before("execution(public void insertaCliente())")
+	// @Before("execution(public void
+	// es.pildoras.aop.dao.ClienteVIPDAO.insertaCliente())") // pointcut expressions
+	@Before("execution(public void insertaCliente*())")
 	public void antesDeInsertarCliente() {
 		System.out.println("EL usuario está logueado!");
 		System.out.println("EL login es correcto, usuario permitido!");
