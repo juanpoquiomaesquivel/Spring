@@ -19,7 +19,9 @@ public class ClasePrincipal {
 		ClienteVIPDAO cv = contexto.getBean("clienteVIPDAO", ClienteVIPDAO.class);
 
 		// llamar al método}
-		c.insertaCliente(); // este es el nombre del método que debe coincidir con la anotación @Before
+		Cliente elCliente = new Cliente();
+
+		c.insertaCliente(elCliente, "normal"); // este es el nombre del método que debe coincidir con la anotación @Before
 		cv.insertaClienteVIP();
 
 		// cerrar el contexto
@@ -28,4 +30,4 @@ public class ClasePrincipal {
 
 }
 
-// https://www.youtube.com/watch?v=_xpXsbkqDho&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=78
+// https://www.youtube.com/watch?v=hjTNAAmSyrQ&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=79
