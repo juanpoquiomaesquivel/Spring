@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="student" class="com.seleniumexpress.di.Student">
+	<!-- for constructor injecetion (it's necesary to put the arguments sorted) -->
+		<constructor-arg name="id" value="1" type="int"/>
+		<constructor-arg name="studentName" value="Abhilash Panigrahi" type="java.lang.String" />
+	<!-- for setter injection
+		<property name="studentName" value="Abhilash Panigrahi" />
+		<property name="id" value="1" />
+	-->
+	</bean>
+	<bean id="dilip" class="com.seleniumexpress.di.Student">
+		<constructor-arg name="id" value="1" type="int"/>
+	</bean>
+	<!--
+	<bean id="ashish" class="com.seleniumexpress.di.Student">
+		<property name="studentName" value="Ashish B" />
+		<property name="id" value="2" />
+	</bean>
+	-->
+</beans>
+
