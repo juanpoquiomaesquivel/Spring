@@ -21,13 +21,21 @@ public class ClasePrincipal {
 		// llamar al método}
 		Cliente elCliente = new Cliente();
 
-		c.insertaCliente(elCliente, "normal"); // este es el nombre del método que debe coincidir con la anotación @Before
+		c.insertaCliente(elCliente, "normal"); // este es el nombre del método que debe coincidir con la anotación
+												// @Before
 		cv.insertaClienteVIP();
 
 		// cerrar el contexto
+
+		c.setCodigoClienteNormal("594561512");
+		c.setValoracionClienteNormal("positiva");
+
+		String codigoCL = c.getCodigoClienteNormal();
+		String valoraCL = c.getValoracionClienteNormal();
+
 		contexto.close();
 	}
 
 }
 
-// https://www.youtube.com/watch?v=6ZpT5S1AOvc&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=80
+// https://www.youtube.com/watch?v=ea_OEI8EOGE&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=81
