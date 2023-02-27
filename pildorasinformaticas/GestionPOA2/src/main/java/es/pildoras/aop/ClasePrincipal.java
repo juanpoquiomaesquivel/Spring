@@ -20,8 +20,10 @@ public class ClasePrincipal {
 
 		// llamar al método}
 		Cliente elCliente = new Cliente();
+		elCliente.setNombre("Juan Diaz");
+		elCliente.setTipo("Normal");
 
-		c.insertaCliente(elCliente, "normal"); // este es el nombre del método que debe coincidir con la anotación
+		c.insertaCliente(elCliente, elCliente.getTipo()); // este es el nombre del método que debe coincidir con la anotación
 												// @Before
 		cv.insertaClienteVIP();
 
@@ -33,4 +35,4 @@ public class ClasePrincipal {
 
 }
 
-// https://www.youtube.com/watch?v=RcozJomQIcc&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=82
+// https://www.youtube.com/watch?v=ZeqAMNTKFn4&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=83
