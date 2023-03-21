@@ -21,8 +21,16 @@ public class LoginConAspecto {
 	public void tareaTrasEncontrarClientes(List<Cliente> listaClientes) {
 		for (Cliente cl : listaClientes) {
 			if (cl.getTipo() == "VIP") {
+				procesadoDatosAfterReturning(listaClientes);
 				System.out.println(cl);
 			}
+		}
+	}
+
+	private void procesadoDatosAfterReturning(List<Cliente> listaClientes) {
+		for (Cliente cl : listaClientes) {
+			String datosProcesados = "V.I.P. " + cl.getNombre().toUpperCase();
+			cl.setNombre(datosProcesados);
 		}
 	}
 
