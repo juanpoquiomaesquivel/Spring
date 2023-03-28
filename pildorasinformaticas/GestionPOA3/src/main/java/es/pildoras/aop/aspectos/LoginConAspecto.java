@@ -3,6 +3,7 @@ package es.pildoras.aop.aspectos;
 import java.util.List;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
@@ -60,5 +61,10 @@ public class LoginConAspecto {
 	@AfterThrowing(pointcut="execution(* es.pildoras.aop.dao.ClienteDAO.encuentraClientes(..))", throwing="LaExcepcion")
 	public void procesandoDatosAfterExceptionEncuentraClientes(Throwable LaExcepcion) {
 		System.out.println("Aquí se estarían efectuando de forma automática las tareas");
+	}
+	
+	@After("execution(* es.pildoras.aop.dao.ClienteDAO.encuentraClientes(..))")
+	public void ejecutandoTareasConYSinExcepcion(JoinPoint elPoint) {
+		System.out.println("Ejecutando tareas SIEMPRE!!!");
 	}
 }
