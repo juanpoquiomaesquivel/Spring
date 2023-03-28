@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
+import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -54,5 +55,10 @@ public class LoginConAspecto {
 				System.out.println("Tipo del cliente: " + cl.getTipo());
 			}
 		}
+	}
+	
+	@AfterThrowing(pointcut="execution(* es.pildoras.aop.dao.ClienteDAO.encuentraClientes(..))", throwing="LaExcepcion")
+	public void procesandoDatosAfterExceptionEncuentraClientes(Throwable LaExcepcion) {
+		System.out.println("Aquí se estarían efectuando de forma automática las tareas");
 	}
 }

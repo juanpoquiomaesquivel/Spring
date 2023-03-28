@@ -16,8 +16,14 @@ public class ClasePrincipal {
 		// Obtener el bean del cintenedor de spring
 
 		ClienteDAO c = contexto.getBean("clienteDAO", ClienteDAO.class);
-		c.encuentraClientes();
+		try {
+		boolean miParam = true;
 		
+		c.encuentraClientes(miParam);
+		} catch (Exception ex) {
+			System.out.println("Excepción lanzada desde la clase principal");
+			System.out.println(ex.getMessage());
+		}
 		System.out.println("Aquí continuará la ejecución del programa.");
 
 		// cerrar el contexto
@@ -28,4 +34,4 @@ public class ClasePrincipal {
 
 }
 
-// https://www.youtube.com/watch?v=OdE013yEtRQ&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=85
+// https://www.youtube.com/watch?v=7ejVDS1Pb0Q&list=PLU8oAlHdN5Blq85GIxtKjIXdfHPksV_Hm&index=86

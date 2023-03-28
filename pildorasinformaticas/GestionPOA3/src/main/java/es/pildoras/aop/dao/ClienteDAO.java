@@ -14,7 +14,12 @@ public class ClienteDAO {
 		System.out.println("Cliente insertado correctamente!!");
 	}
 	
-	public List<Cliente> encuentraClientes() {
+	public List<Cliente> encuentraClientes(boolean miParam) {
+		
+		if (miParam ) {
+			throw new RuntimeException("Error! no se ha podido procesar la petición");
+		}
+		
 		List<Cliente> listaClientes = new ArrayList<Cliente>();
 		
 		// simular clientes devueltos por bbdd
