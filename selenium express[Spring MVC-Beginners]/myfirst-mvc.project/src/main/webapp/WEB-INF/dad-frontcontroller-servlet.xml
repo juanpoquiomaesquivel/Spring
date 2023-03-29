@@ -10,6 +10,8 @@
                            http://www.springframework.org/schema/context
                            http://www.springframework.org/schema/context/spring-context-4.3.xsd ">
 
+	<context:component-scan base-package="com.home.controllers"></context:component-scan>
+
 </beans>
 <!-- https://memorynotfound.com/spring-mvc-xml-configuration-example/ -->
 <!-- https://www.youtube.com/watch?v=zCHrZdJODg4&list=PL3NrzZBjk6m-OSeL3DRMD_ISa0u-9c1l1&index=1 -->
