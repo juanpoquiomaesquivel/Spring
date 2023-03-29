@@ -3,9 +3,11 @@ package es.pildoras.aop.aspectos;
 import java.util.List;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.AfterThrowing;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -66,5 +68,20 @@ public class LoginConAspecto {
 	@After("execution(* es.pildoras.aop.dao.ClienteDAO.encuentraClientes(..))")
 	public void ejecutandoTareasConYSinExcepcion(JoinPoint elPoint) {
 		System.out.println("Ejecutando tareas SIEMPRE!!!");
+	}
+	
+	@Around("execution(* es.pildoras.aop.servicios.*.getServicio(..))")
+	public Object ejecutarServicio(ProceedingJoinPoint elPoint) throws Throwable {
+		System.out.println("----- comienzo de acciones antes de llamada ------");
+		
+		long comienzo = System.currentTimeMillis();
+		Object resultado = elPoint.proceed(); // el point al metodo que buscamos ejecutar
+		long elfin = System.currentTimeMillis();
+		long duracion = elfin - comienzo;
+		
+		System.out.println("El método tardó: " + duracion / 1000 + " segundos");
+		System.out.println("------ tareas depués de llamada ------");
+		
+		return resultado;
 	}
 }
