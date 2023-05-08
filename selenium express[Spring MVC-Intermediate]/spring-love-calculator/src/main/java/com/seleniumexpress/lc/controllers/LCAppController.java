@@ -1,7 +1,12 @@
 package com.seleniumexpress.lc.controllers;
 
+import java.util.List;
+
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -20,7 +25,18 @@ public class LCAppController {
 	/*public String showResultPage(@RequestParam("userName") String userName1,
 			@RequestParam("crushName") String crushName1, Model model) {*/
 	//public String showResultPage(UserInfoDTO userInfoDTO, Model model) {
-	public String showResultPage(@ModelAttribute("userInfo") UserInfoDTO userInfo) {
+	public String showResultPage(@Valid @ModelAttribute("userInfo") UserInfoDTO userInfo, BindingResult result) {
+		System.out.println(userInfo.isTermAndCondition());
+		
+		if (result.hasErrors()) {
+			List<ObjectError> errors = result.getAllErrors();
+			
+			for (ObjectError e : errors) {
+				System.out.println(e);
+			}
+			
+			return "home-page";
+		}
 		
 		return "result-page";
 	}
