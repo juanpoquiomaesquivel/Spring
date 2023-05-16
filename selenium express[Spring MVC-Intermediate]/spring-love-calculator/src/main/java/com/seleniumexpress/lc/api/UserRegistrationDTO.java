@@ -8,6 +8,8 @@ public class UserRegistrationDTO {
 	private String countryName;
 	private String[] hobbies;
 	private String gender;
+	private CommunicationDTO communicationDTO;
+	private int age;
 
 	public String getGender() {
 		return gender;
@@ -55,5 +57,21 @@ public class UserRegistrationDTO {
 
 	public void setHobbies(String[] hobbies) {
 		this.hobbies = hobbies;
+	}
+
+	public CommunicationDTO getCommunicationDTO() {
+		return communicationDTO;
+	}
+
+	public void setCommunicationDTO(CommunicationDTO communicationDTO) {
+		this.communicationDTO = communicationDTO;
+	}
+	
+	public int getAge() {
+		return age;
+	}
+	
+	public void setAge(int age) {
+		this.age = age;
 	}
 }

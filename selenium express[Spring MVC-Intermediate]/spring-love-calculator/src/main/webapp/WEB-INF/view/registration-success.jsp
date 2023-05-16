@@ -17,6 +17,9 @@
 	<br /> Hobbies:
 	<c:forEach var="temp" items="${userReg.hobbies}">${temp}</c:forEach>
 	<br /> Gender: ${userReg.gender}
+	<br /> Age: ${userReg.age}
+	<br /> Email: ${userReg.communicationDTO.email}
+	<br /> Phone: ${userReg.communicationDTO.phone}
 	<br />
 </body>
 </html>
